@@ -45,6 +45,7 @@ public class WebshopStep extends BaseTest {
 	@Then("I enter password {string}")
 	public void i_enter_password(String pass) {
 		obj.getPassword().sendKeys(pass);
+		obj.getPassword();
 	}
 
 	@And("I enter confirmPass {string}")
