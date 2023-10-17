@@ -29,10 +29,34 @@ public class LoginPOM {
 		submitBtn.click();
 
 	}
-	
+
 	public void validateLogout() {
 
 		logOutBtn.isDisplayed();
+
+	}
+
+	public void clickOnElectronics() {
+
+		electronics.click();
+
+	}
+
+	public void clickOnCellPhones() {
+
+		cellPhone.click();
+
+	}
+
+	public void clickOnAddToCart() {
+
+		addToCartBtn.click();
+
+	}
+
+	public void validateMsg() {
+
+		successMsg.isDisplayed();
 
 	}
 
@@ -58,6 +82,17 @@ public class LoginPOM {
 
 	@FindBy(xpath = "//a[@class=\"ico-logout\"]")
 	private WebElement logOutBtn;
-	
-	
+
+	@FindBy(xpath = "(//a[@href=\"/electronics\"])[1]")
+	private WebElement electronics;
+
+	@FindBy(xpath = "//img[@alt=\"Picture for category Cell phones\"]")
+	private WebElement cellPhone;
+
+	@FindBy(xpath = "(//input[@value=\"Add to cart\"])[1]")
+	private WebElement addToCartBtn;
+
+	@FindBy(xpath = "//p[text()='The product has been added to your ']")
+	private WebElement successMsg;
+
 }

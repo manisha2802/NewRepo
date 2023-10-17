@@ -7,39 +7,64 @@ public class LoginStepDef extends BaseTest {
 
 	LoginPOM obj;
 
-	@Given("I navigate to {string}")
-	public void i_navigate_to(String url) {
-		openBrowser();
-		navigateUrl(url);
-	}
+//	@Given("I navigate to {string}")
+//	public void i_navigate_to(String url) {
+//		openBrowser();
+//		navigateUrl(url);
+//	}
 
-	@When("I click on login link")
+	@When("user click on login link")
 	public void i_click_on_login_link() {
 
 		obj=new LoginPOM(driver);
 		obj.clkOnLoginBtn();
 	}
 
-	@And("I enter email Id {string}")
+	@And("user enter email Id {string}")
 	public void i_enter_email_id(String email) {
 		obj.enterEmail(email);
 	}
 
-	@And("I enter password {string}")
+	@And("user enter password {string}")
 	public void i_enter_password(String pass) {
 		obj.enterPass(pass);
 	}
 
-	@And("I click on login button")
+	@And("user click on login button")
 	public void i_click_on_login_button() {
 		obj.clkOnSubmit();
 	}
 
-	@Then("I should be able to login successfully")
+	@Then("user should be able to login successfully")
 	public void i_should_be_able_to_login_successfully() {
 
 		obj.validateLogout();
 		
 	}
+
+	@Then("click on electronics link")
+	public void click_on_electronics_link() {
+	    
+		obj.clickOnElectronics();
+	}
+	
+	@Then("click on cell phones")
+	public void click_on_cell_phones() {
+	   obj.clickOnCellPhones();
+	}
+	
+	@Then("click on add to cart")
+	public void click_on_add_to_cart() {
+	   obj.clickOnAddToCart();
+	}
+	
+	@Then("validate the success message")
+	public void validate_the_success_message() {
+	    
+		obj.validateMsg();
+		closeBrowser();
+	}
+
+
 
 }
