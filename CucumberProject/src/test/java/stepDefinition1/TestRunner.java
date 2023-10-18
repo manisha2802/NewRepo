@@ -10,10 +10,10 @@ import io.cucumber.junit.CucumberOptions;
 @RunWith(Cucumber.class)
 @CucumberOptions(
 		
-	features="src/test/resources/Features/Login.feature"	, 
+	features="src\\test\\resources\\Features\\GiftCard.feature"	, 
 	glue= {"stepDefinition1"},
 	dryRun=false,		
-	plugin= {"pretty","html:target/Reports/OrangeHRM.html"},
+	plugin= {"pretty","html:target/Reports/GiftCard.html"},
 	monochrome = true
 		)
 
