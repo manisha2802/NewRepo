@@ -17,4 +17,13 @@ Feature: Gift Card
     And User enters Friend's email "msk123@gmail.com"
     Then User clicks on send email button
     Then user verifys success message
+    When user mouse over on computers
+    And user clicks on Desktop
+    And User sorts the desktop by name A to Z
+    And User clicks on expensive computer
+    And User clicks on add to compare list
+    Then User clicks on logout button 
+    
+    
+    
 
